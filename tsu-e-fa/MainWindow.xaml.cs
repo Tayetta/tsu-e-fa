@@ -42,18 +42,27 @@ namespace tsu_e_fa
            userChoice = ROCK;
             PlayGame(userChoice);        
         }
-        //кнопка выбора камень
+        //кнопка выбора ножницы
         private void Scissors_Click(object sender, RoutedEventArgs e) 
         {
             userChoice = SCISSOR;
             PlayGame(userChoice);            
         }
-        //кнопка выбора камень
+        //кнопка выбора бумага
         private void Paper_Click(object sender, RoutedEventArgs e)
         {
             userChoice = PAPER;      
             PlayGame(PAPER);           
         }
+        //кнопка рандом-выбора игрока
+        private void Rand_Click(object sender, RoutedEventArgs e)
+        {
+            string[] choies = { ROCK, SCISSOR, PAPER };
+            Random random = new Random();
+            userChoice = choies[random.Next(choies.Length)];
+            PlayGame(userChoice);
+        }
+        
         //функция проверки выбора игроков
         private void PlayGame(string userChoice)
         {
@@ -81,7 +90,7 @@ namespace tsu_e_fa
         //функция отображения результатов
         private void DisplayResults(string userChoice,string opponentChoice, int isResult)
         {  
-            // выведем выбор оппонентов          
+            // выведем выбор оппонентов в поле информации          
             PlayerChoice.Text = userChoice;
             OpponentChoice.Text = opponentChoice;
             // выведем результат игры
@@ -174,5 +183,6 @@ namespace tsu_e_fa
             imageOpponent.Source = new BitmapImage(new Uri(patch, UriKind.Relative));
             imageOpponent.Stretch = Stretch.Uniform;
         }
+
     }
 }

@@ -6,6 +6,23 @@
         xmlns:local="clr-namespace:tsu_e_fa"
         mc:Ignorable="d"
          Title="Камень-Ножницы-Бумага" Height="400" Width="600">
+    <Window.Resources>
+        <Style x:Key="DynamicButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#336063"/>
+            <Setter Property="BorderBrush" Value="#88bca8"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.9"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Opacity" Value="0.3"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid>
        
         <!-- Игровое поле -->
@@ -44,15 +61,15 @@
         </Border>
         <!-- Кнопки снизу -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10,0,240,10">
-            <Button Name="Rock" Width="60" Height="60"  Margin="10,0,10,0" Click="Rock_Click">                        
+            <Button Name="Rock" Width="60" Height="60"  Margin="10,0,10,0" Click="Rock_Click" Style="{StaticResource DynamicButtonStyle}">                        
                 <Button.Resources>
                     <Style TargetType="Border">                            
-                        <Setter Property="CornerRadius" Value="14"/>                        
+                        <Setter Property="CornerRadius" Value="10"/>                        
                     </Style>
                 </Button.Resources>                        
                 <Image x:Name="myImage" Source="Resourse/rock-button.jpg" Stretch="Uniform" />
-            </Button>            
-            <Button Width="60" Height="60" Margin="10,0,10,0" Click="Scissors_Click">                        
+            </Button>
+            <Button Width="60" Height="60" Margin="10,0,10,0" Click="Scissors_Click" Style="{StaticResource DynamicButtonStyle}">                        
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="14"/>
@@ -60,18 +77,18 @@
                 </Button.Resources>
                 <Image Source="Resourse/Scissor.jpg" Stretch="Uniform"/>            
             </Button>
-            <Button Width="60" Height="60" Margin="10,0,10,0" Click="Paper_Click">
+            <Button Width="60" Height="60" Margin="10,0,10,0" Click="Paper_Click" Style="{StaticResource DynamicButtonStyle}">
                 <Button.Resources>
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="14"/>
+                        <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
                 <Image Source="Resourse/paper-button.jpg" Stretch="Uniform"/>
             </Button>
-            <Button Name="Rando" Width="60" Height="60"  Margin="10,0,10,0" Click="Rand_Click">
-                <Button.Resources>
+            <Button Name="Rando" Width="60" Height="60"  Margin="10,0,10,0" Click="Rand_Click" Style="{StaticResource DynamicButtonStyle}">
+               <Button.Resources>                    
                     <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="14"/>
+                        <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
                 <Image Source="Resourse/random.jpg" Stretch="Uniform" />

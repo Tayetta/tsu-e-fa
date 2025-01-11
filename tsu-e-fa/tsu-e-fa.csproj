@@ -19,6 +19,7 @@
     <None Remove="Resourse\paper-art.png" />
     <None Remove="Resourse\paper-button.jpg" />
     <None Remove="Resourse\paper-button.png" />
+    <None Remove="Resourse\random.jpg" />
     <None Remove="Resourse\random.png" />
     <None Remove="Resourse\rock-button.jpg" />
     <None Remove="Resourse\rock-button.png" />
@@ -36,6 +37,7 @@
     <Resource Include="Resourse\Oops.jpg" />
     <Resource Include="Resourse\paper-art.jpg" />
     <Resource Include="Resourse\paper-button.jpg" />
+    <Resource Include="Resourse\random.jpg" />
     <Resource Include="Resourse\rock-button.jpg" />
     <Resource Include="Resourse\rock-png.jpg" />
     <Resource Include="Resourse\rock.jpg" />
