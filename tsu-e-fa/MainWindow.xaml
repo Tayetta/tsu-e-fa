@@ -43,18 +43,16 @@
             </StackPanel>
         </Border>
         <!-- Кнопки снизу -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="30,0,250,10">
-            <Button Name="Rock" Width="60" Height="60"  Margin="20,0,30,0" Click="Rock_Click">
-                        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10,0,240,10">
+            <Button Name="Rock" Width="60" Height="60"  Margin="10,0,10,0" Click="Rock_Click">                        
                 <Button.Resources>
                     <Style TargetType="Border">                            
                         <Setter Property="CornerRadius" Value="14"/>                        
                     </Style>
                 </Button.Resources>                        
                 <Image x:Name="myImage" Source="Resourse/rock-button.jpg" Stretch="Uniform" />
-
-            </Button>
-            <Button Width="60" Height="60" Margin="20,0,30,0" Click="Scissors_Click">                        
+            </Button>            
+            <Button Width="60" Height="60" Margin="10,0,10,0" Click="Scissors_Click">                        
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="14"/>
@@ -62,7 +60,7 @@
                 </Button.Resources>
                 <Image Source="Resourse/Scissor.jpg" Stretch="Uniform"/>            
             </Button>
-            <Button Width="60" Height="60" Margin="20,0,30,0" Click="Paper_Click">
+            <Button Width="60" Height="60" Margin="10,0,10,0" Click="Paper_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="14"/>
@@ -70,7 +68,14 @@
                 </Button.Resources>
                 <Image Source="Resourse/paper-button.jpg" Stretch="Uniform"/>
             </Button>
-            
+            <Button Name="Rando" Width="60" Height="60"  Margin="10,0,10,0" Click="Rand_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="14"/>
+                    </Style>
+                </Button.Resources>
+                <Image Source="Resourse/random.jpg" Stretch="Uniform" />
+            </Button>
 
         </StackPanel>
       

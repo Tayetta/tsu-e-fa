@@ -36,28 +36,29 @@ namespace tsu_e_fa
             ResultText.FontSize = 30;
             ResultText.VerticalAlignment = VerticalAlignment.Center;         
         }
-
+        //кнопка выбора камень
         private void Rock_Click(object sender, RoutedEventArgs e)
         {
            userChoice = ROCK;
             PlayGame(userChoice);        
         }
-
+        //кнопка выбора камень
         private void Scissors_Click(object sender, RoutedEventArgs e) 
         {
             userChoice = SCISSOR;
             PlayGame(userChoice);            
         }
-
+        //кнопка выбора камень
         private void Paper_Click(object sender, RoutedEventArgs e)
         {
             userChoice = PAPER;      
             PlayGame(PAPER);           
         }
-
+        //функция проверки выбора игроков
         private void PlayGame(string userChoice)
         {
             string[] choies = { ROCK, SCISSOR, PAPER};
+            //рандомный выбор оппонента
             Random random = new Random();
            opponentChoice = choies[random.Next(choies.Length)];
 
@@ -77,6 +78,7 @@ namespace tsu_e_fa
             }
             DisplayResults(userChoice,opponentChoice,isResult);
         }
+        //функция отображения результатов
         private void DisplayResults(string userChoice,string opponentChoice, int isResult)
         {  
             // выведем выбор оппонентов          
@@ -120,11 +122,11 @@ namespace tsu_e_fa
             {
                 info.Text = " ";
             }
-
+            //отразим визуальный выбор игроков
             UpdateCompImage(opponentChoice);
             UpdateUserImage(userChoice);
         }
-        
+        //функция отображения выбора игрока
         private void UpdateUserImage(string userChoice)
         {
             imageUser.Visibility = Visibility.Visible;
@@ -144,9 +146,11 @@ namespace tsu_e_fa
                     patch = "Resourse/Oops.jpg";
                     break;
             }
+            //отрисовка изображения
             imageUser.Source = new BitmapImage(new Uri(patch, UriKind.Relative));
             imageOpponent.Stretch = Stretch.Uniform;
         }
+        //функция отображения выбора опонента
         private void UpdateCompImage(string opponentChoice)
         {            
             imageOpponent.Visibility = Visibility.Visible;
@@ -166,7 +170,7 @@ namespace tsu_e_fa
                     patch = "Resourse/Oops.jpg";
                     break;
             }
-
+            //отрисовка изображения
             imageOpponent.Source = new BitmapImage(new Uri(patch, UriKind.Relative));
             imageOpponent.Stretch = Stretch.Uniform;
         }
