@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>tsu_e_fa</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resourse\0p.jpg" />
+    <None Remove="Resourse\comp-icon.jpg" />
+    <None Remove="Resourse\icons-user.jpg" />
+    <None Remove="Resourse\Oops.jpg" />
+    <None Remove="Resourse\Oops.png" />
+    <None Remove="Resourse\paper-art.jpg" />
+    <None Remove="Resourse\paper-art.png" />
+    <None Remove="Resourse\paper-button.jpg" />
+    <None Remove="Resourse\paper-button.png" />
+    <None Remove="Resourse\rock-button.jpg" />
+    <None Remove="Resourse\rock-button.png" />
+    <None Remove="Resourse\rock-png.jpg" />
+    <None Remove="Resourse\rock-png.png" />
+    <None Remove="Resourse\rock.jpg" />
+    <None Remove="Resourse\rock.png" />
+    <None Remove="Resourse\Scissor.jpg" />
+    <None Remove="Resourse\Scissor.png" />
+    <None Remove="Resourse\user-icon.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resourse\comp-icon.jpg" />
+    <Resource Include="Resourse\Oops.jpg" />
+    <Resource Include="Resourse\paper-art.jpg" />
+    <Resource Include="Resourse\paper-button.jpg" />
+    <Resource Include="Resourse\rock-button.jpg" />
+    <Resource Include="Resourse\rock-png.jpg" />
+    <Resource Include="Resourse\rock.jpg" />
+    <Resource Include="Resourse\Scissor.jpg" />
+    <Resource Include="Resourse\user-icon.jpg" />
+  </ItemGroup>
+
+</Project>
