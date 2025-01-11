@@ -57,19 +57,23 @@ namespace tsu_e_fa
         //кнопка рандом-выбора игрока
         private void Rand_Click(object sender, RoutedEventArgs e)
         {
-            string[] choies = { ROCK, SCISSOR, PAPER };
-            Random random = new Random();
-            userChoice = choies[random.Next(choies.Length)];
+            userChoice = RandomSelection();
             PlayGame(userChoice);
         }
         
+        //функция рандомного выбора
+        private string RandomSelection()
+        {
+            string[] choies = { ROCK, SCISSOR, PAPER };
+            Random random = new Random();
+            string arbitrary = choies[random.Next(choies.Length)];
+            return arbitrary;
+        }
         //функция проверки выбора игроков
         private void PlayGame(string userChoice)
-        {
-            string[] choies = { ROCK, SCISSOR, PAPER};
-            //рандомный выбор оппонента
-            Random random = new Random();
-           opponentChoice = choies[random.Next(choies.Length)];
+        {           
+            //рандомный выбор оппонента           
+            opponentChoice = RandomSelection();
 
             if(userChoice == opponentChoice)
             {
